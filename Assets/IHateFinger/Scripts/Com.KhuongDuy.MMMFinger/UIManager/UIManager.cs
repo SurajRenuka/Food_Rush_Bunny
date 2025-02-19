@@ -28,6 +28,8 @@ namespace Com.KhuongDuy.MMMFinger
 
 
 
+        public bool isLeaderboardShow = false;
+
         // Constructor
         private UIManager() { }
 
@@ -47,7 +49,6 @@ namespace Com.KhuongDuy.MMMFinger
         // Behaviour
         void Start()
         {
-            SetScoreText(); 
             if (PlayerPrefs.GetInt("IsSoundDisabled") == 0)
             {
                 SoundOffButton.SetActive(false);
@@ -57,6 +58,7 @@ namespace Com.KhuongDuy.MMMFinger
                 SoundOnButton.SetActive(false);
             }
             UpdateSound();
+            SetScoreText(); 
         }
 
         void UpdateSound()
@@ -107,7 +109,11 @@ namespace Com.KhuongDuy.MMMFinger
             }
 
             currentScoreText.text = "Your Score : " + PlayerPrefs.GetFloat(Constants.LAST_SCORE, 0.0f) + "";
-            bestScoreText.text = "High Score : " + PlayerPrefs.GetFloat(Constants.BEST_SCORE, 0.0f);
+            int highScore = (int)PlayerPrefs.GetFloat(Constants.BEST_SCORE, 0.0f);
+            bestScoreText.text = $"High Score : {highScore}";
+
+            // Store Highscore to GPGS
+            GooglePlayGameServicesManager.Instance.SubmitScoreToLeaderboard(highScore);
         }
 
         public void StartGame()

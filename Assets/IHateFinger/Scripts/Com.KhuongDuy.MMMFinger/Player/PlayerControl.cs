@@ -97,7 +97,7 @@ namespace Com.KhuongDuy.MMMFinger
 
         void Update()
         {
-            if (Input.GetMouseButtonDown(0) && GameController.Instance.GameState != GAMESTATE.OVER && !FindAnyObjectByType<InterstitialAdManager>()._isAdOpen)
+            if (Input.GetMouseButtonDown(0) && GameController.Instance.GameState != GAMESTATE.OVER && !FindAnyObjectByType<InterstitialAdManager>()._isAdOpen && !UIManager.Instance.isLeaderboardShow)
             {
                 pointer.position = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
                 EventSystem.current.RaycastAll(pointer, raycastResult);

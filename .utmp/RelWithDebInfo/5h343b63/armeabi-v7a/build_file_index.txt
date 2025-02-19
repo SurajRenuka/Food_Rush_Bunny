@@ -1,0 +1,2 @@
+C:\GaBBaR\CODES\UNITY\Food_Rush_Bunny\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\CMakeLists.txt
+C:\GaBBaR\CODES\UNITY\Food_Rush_Bunny\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\GameActivity\CMakeLists.txt
