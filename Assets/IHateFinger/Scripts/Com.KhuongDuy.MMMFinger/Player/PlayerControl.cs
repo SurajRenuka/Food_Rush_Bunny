@@ -97,7 +97,7 @@ namespace Com.KhuongDuy.MMMFinger
 
         void Update()
         {
-            if (Input.GetMouseButtonDown(0) && GameController.Instance.GameState != GAMESTATE.OVER && !FindAnyObjectByType<InterstitialAdManager>()._isAdOpen && !UIManager.Instance.isLeaderboardShow)
+            if (Input.GetMouseButtonDown(0) && GameController.Instance.GameState != GAMESTATE.OVER && !UIManager.Instance.isLeaderboardShow)
             {
                 pointer.position = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
                 EventSystem.current.RaycastAll(pointer, raycastResult);
@@ -121,7 +121,7 @@ namespace Com.KhuongDuy.MMMFinger
 
                         if (raycastResult.Count == 0)
                         {
-                            FindAnyObjectByType<Banner>().DestroyAd();
+                            //FindAnyObjectByType<Banner>().DestroyAd();
                         }
                         else
                         {
@@ -305,13 +305,18 @@ namespace Com.KhuongDuy.MMMFinger
 
             GameController.Instance.GameState = GAMESTATE.OVER;
 
-            if (Random.Range(1, 3) == 2)
+            /*if (Random.Range(1, 3) == 2)
             {
                 FindAnyObjectByType<Banner>().LoadAd();
             }
             else
             {
                 FindAnyObjectByType<InterstitialAdManager>().ShowInterstitialAd();
+            }*/
+
+            if (Random.Range(0,10) == 9)
+            {
+                GoogleAd_Manager.Instance.ShowInterstitialAd();
             }
 
             UIManager.Instance.Die();

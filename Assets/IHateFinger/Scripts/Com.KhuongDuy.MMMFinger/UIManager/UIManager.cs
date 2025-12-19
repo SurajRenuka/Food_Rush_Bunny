@@ -59,7 +59,13 @@ namespace Com.KhuongDuy.MMMFinger
             }
             UpdateSound();
             SetScoreText(); 
+
+            StartCoroutine(ShowBannerAd_Coroutine());
+
         }
+
+
+        
 
         void UpdateSound()
         {
@@ -144,5 +150,15 @@ namespace Com.KhuongDuy.MMMFinger
             mouth.SetActive(true);
             faceAnim.Play("game_over_effect");
         }
+
+
+        private IEnumerator ShowBannerAd_Coroutine()
+        {
+            yield return new WaitForSeconds(2f);
+
+            GoogleAd_Manager.Instance.ShowBannerAd();
+        }
+
+
     }
 }

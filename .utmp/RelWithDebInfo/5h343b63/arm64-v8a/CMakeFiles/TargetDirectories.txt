@@ -1,5 +1,0 @@
-C:/GaBBaR/CODES/UNITY/Food_Rush_Bunny/.utmp/RelWithDebInfo/5h343b63/arm64-v8a/CMakeFiles/edit_cache.dir
-C:/GaBBaR/CODES/UNITY/Food_Rush_Bunny/.utmp/RelWithDebInfo/5h343b63/arm64-v8a/CMakeFiles/rebuild_cache.dir
-C:/GaBBaR/CODES/UNITY/Food_Rush_Bunny/.utmp/RelWithDebInfo/5h343b63/arm64-v8a/GameActivity/CMakeFiles/game.dir
-C:/GaBBaR/CODES/UNITY/Food_Rush_Bunny/.utmp/RelWithDebInfo/5h343b63/arm64-v8a/GameActivity/CMakeFiles/edit_cache.dir
-C:/GaBBaR/CODES/UNITY/Food_Rush_Bunny/.utmp/RelWithDebInfo/5h343b63/arm64-v8a/GameActivity/CMakeFiles/rebuild_cache.dir
